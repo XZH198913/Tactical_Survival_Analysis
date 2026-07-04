@@ -1,0 +1,31 @@
+# 系统文件
+.DS_Store
+Thumbs.db
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# IDE/编辑器配置
+.vscode/
+.idea/
+*.ipynb_checkpoints/  # Jupyter Notebook临时检查点（核心！必加，避免提交冗余）
+__pycache__/          # Python编译缓存
+*.pyc
+*.pyo
+*.pyd
+
+# 临时数据/缓存
+data/tmp/
+outputs/tmp/
+*.log
+
+# 本地环境文件
+.env
+venv/
+env/
+conda_env/
+
+# 大型文件（可选，若数据库文件过大，建议忽略，仅保留链接/说明）
+data/databases/*.db
+data/databases/*.sqbpro

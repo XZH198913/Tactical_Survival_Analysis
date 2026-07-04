@@ -1,0 +1,48 @@
+======================================================================
+Inverted U-Shape Survival Curve Validation Report
+======================================================================
+Sample size N = 283
+
+【1. Quadratic Regression: Y ~ X + X²】
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.0105      0.141      0.075      0.940      -0.267       0.288
+x1             3.8103      0.502      7.595      0.000       2.823       4.798
+x2            -3.4963      0.442     -7.911      0.000      -4.366      -2.626
+==============================================================================
+✅ Quadratic coefficient significant (β₂ = 3.8103, p = 0.0000), consistent with inverted U-shape.
+📐 Curve vertex at Camouflage Quality = 0.545
+
+【2. Segmented Pearson Correlation: Threshold = 0.9】
+Camouflage ≤ 0.9: r = 0.4602 (p = 0.0000), N = 122
+Camouflage > 0.9: r = -0.4109 (p = 0.0000), N = 161
+✅ Significant reversal of correlation sign, supporting threshold effect.
+
+【4. Tactical Balance Zone Samples (0.85 ≤ X ≤ 0.92)】
+Number of samples in zone: 114
+
+Top 5 works by Indigestibility Score:
+  Index 132: Camouflage=0.850, Core Stability=0.980, Indigestibility=0.960
+  Index 126: Camouflage=0.900, Core Stability=1.000, Indigestibility=0.950
+  Index 183: Camouflage=0.880, Core Stability=0.900, Indigestibility=0.950
+  Index 144: Camouflage=0.900, Core Stability=1.000, Indigestibility=0.950
+  Index 131: Camouflage=0.900, Core Stability=0.950, Indigestibility=0.920
+
+✅ Sweet spot samples saved to sweet_spot_samples.csv
+📈 Inverted U-curve plot saved: inverted_U_curve.png
+
+======================================================================
+📄 Suggested Academic Paragraph
+======================================================================
+
+
+Preliminary linear correlation analysis showed no significant association between camouflage quality and indigestibility (r = -0.004).
+However, quadratic regression revealed a significant inverted U-shaped relationship (β₂ = 3.810, p < 0.001).
+The vertex of the curve lies at Camouflage Quality = 0.545, indicating that before camouflage reaches approximately 0.9,
+the two are positively correlated (r = 0.460); beyond 0.9, the correlation reverses to negative (r = -0.411).
+This finding supports the "tactical balance hypothesis": excessive camouflage paradoxically predicts a loss of core autonomy.
+(Note: The current dataset does not contain flight type grouping; camouflage consistency comparison is unavailable.)
+
+======================================================================
+Analysis complete.
